@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* prevents scrolling completely as good for dashboard app */
+    overflow-x: none;
+    overflow-y: none;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* parent section here */
+.parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Sidebar here */
+.sideBar{
+    width: 4.8%;
+    height: 100%;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* for the logo */
+.red-square{
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    border: 8px solid rgb(236, 13, 13);
+    border-radius: 8px;
+}
+
+/* For the ul inside sidebar */
+.sideBar ul{
+    list-style-type: none;
+    font-size: 1.5rem;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sideBar ul li {
+    padding-left: 20px;
+    border-left: 6px solid transparent;
+}
+.sideBar ul li:hover{
+    border-left: 6px solid #8c45ff;
+    color: black;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;    
+}
+
+/* for the Main section containing all the mian sections */
+.main{
+    width: 95.2%;
+    height: 100%;
+}
+
+
+
+/* for the navbar at the top */
+.nav{
+    width: 100%;
+    height: 7.4vh;
+    padding: 0 44px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-center{
+    width: 50%;
+    min-height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+
+}
+
+.nav-center li {
+    border-top: 4px solid transparent;
+    padding: 14px 5px;
+}
+
+.nav-center li:hover{
+    border-top: 4px solid #8c45ff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* for the dollar sign icon inside .nav-center class inside third li*/
+.nav-center .fa-dollar-sign {
+    position: relative;
+    border: 2px solid #8c45ff;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 2px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #8c45ff;
+    background: white;
+    /* optional for contrast */
+    z-index: 1;
+    /* keep the icon above the pseudo-element */
+}
+
+.nav-center .fa-dollar-sign::after{
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #cdb5f4;
+    border-radius: 50%;
+    filter: blur(0px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* for the NAV-RIGHT UL containing notification bell and  google G */
+.nav-right{
+    width: 6.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.7rem;
+    color: grey;
+}
+
+/* bell icon */
+.nav-right .fa-bell{
+    position: relative;
+}
+
+/* adding red notification dot to notification bell icon */
+.nav-right .fa-bell::after{
+    position: absolute;
+    content: "";
+    right: -8px;
+    top: -6px;
+    width: 7px;
+    height: 7px;
+    background: #ff0000;
+    box-shadow: 0 0 7px red;
+    border-radius: 50%;
+}
+
+/* coloring google G */
+.nav-right .fa-google{
+    background: conic-gradient(
+        #EA4335 0deg 30deg,
+        /* Blue */
+        #34A853 60deg 180deg,
+        /* Red */
+        #FBBC05 180deg 250deg,
+        /* Yellow */
+        #EA4335 250deg 180deg
+        /* Green */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* for the chat-parent section row at top and 3 columns below row */
+.chat-Parent{
+    background: #eff0f9;
+    height: 92.6vh;
+    padding: 2px 37px;
+    border-top-left-radius: 30px;
+    display: grid;
+    grid-template-areas: 
+        'topRow topRow topRow'
+        'colOne colTwo colThree';
+    grid-template-rows: 45px 1fr;
+    grid-template-columns: 68px 3fr 9fr;
+    gap: 20px;
+}
+
+/* row for the credits data, time duration with dates */
+.credits-data{
+    grid-area: topRow;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* div inside credits-data for data on right */
+.credits{
+    color: grey;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+}
+
+/* 1st child of credits p */
+.credits p:first-child{
+    font-weight: 500;
+}
+
+/* 2nd child div inside .credits */
+.credits div {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding-right: 30px;
+    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); */
+    /* i used this to hide the icon background sharp edges overflow */
+    overflow: hidden;
+}
+
+/* span inside div for c icon*/
+.credits div span {
+    font-size: 1.2rem;
+    background: #8c45ff;
+    color: white;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* p inside div for number */
+.credits div p {
+    font-size: 1.2rem;
+    padding-right: 50px;
+    color: #8c45ff;
+    background: #fff;
+    font-weight: 500;
+}
+
+
+/* last child of .credits */
+.credits p:last-child{
+    height: 35px;
+    font-size: 0.8rem;
+    background: #fff;
+    padding: 7px 26px 7px 15px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* calender icon in last child of .credits */
+.credits p:last-child i{
+    right: 20px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* col1 UL for sidebar in main that contains all chat platforms like wattsapp, contacts etc */
+.chat-sideBar{
+    grid-area: colOne;
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.chat-sideBar li {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.chat-sideBar li:hover{
+    background: #e9e9e9;
+    border-radius: 5px;
+}
+
+
+
+/* col2 for recent chats and all chats */
+.recentChats{
+    grid-area: colTwo;
+    background: #fff;
+    border-radius: 7px;
+}
+
+/* col3 for open chat in main section  */
+.openChat{
+    grid-area: colThree;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 7px;
+}
