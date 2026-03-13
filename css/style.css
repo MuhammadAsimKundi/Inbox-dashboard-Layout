@@ -284,7 +284,7 @@ body {
     grid-area: colOne;
     background: #fff;
     border-radius: 7px;
-    padding: 30px 12px;
+    padding: 22px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +292,9 @@ body {
     list-style-type: none;
 }
 
+/* li inside .chat-sideBar UL for the image */
 .chat-sideBar li {
+    position: relative;
     width: 40px;
     height: 40px;
     display: flex;
@@ -301,11 +303,36 @@ body {
     border-radius: 5px;
 }
 
+/* Hover effect over li's inside ul */
 .chat-sideBar li:hover{
     background: #e9e9e9;
     border-radius: 5px;
 }
 
+/* images inside chat-sideBar UL li's */
+.chat-sideBar li img {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* adding red notification dot to 3 li's in chat-sideBar ul */
+.chat-sideBar li:nth-child(3)::after, 
+.chat-sideBar li:nth-child(4)::after, 
+.chat-sideBar li:nth-child(5)::after{
+    position: absolute;
+    content: "";
+    right: 0px;
+    top: 2px;
+    width: 5px;
+    height: 5px;
+    background: #ff0000;
+    box-shadow: 0 0 7px red;
+    border-radius: 50%;
+
+}
 
 
 /* col2 for recent chats and all chats */
@@ -313,7 +340,135 @@ body {
     grid-area: colTwo;
     background: #fff;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
+/* .ai-contacts  inside recent chats for the top bar*/
+.ai-contacts{
+    /* height: 58px; */
+    height: 10%;
+    width: 100%;
+    padding: 0 20px 0 30px;
+    background: #00ca00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* h3 inside the .ai-contacts in recent-chats for top bar */
+.ai-contacts h3{
+    color: #fff;
+    font-weight: 600;
+}
+
+/* div inside the .ai-contacts in recent-chats for top bar */
+.ai-contacts div {
+    width: 40px;
+    height: 40px;
+    background: #f9f9f9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* signal bars in the div in .ai-contacts in recent-chats for top bar */
+.ai-contacts div img {
+    width: 25px;
+    height: 25px;
+}
+
+/* .search-bar inside  recent-chats for top bar */ 
+.search-bar {
+    height: 8%;
+    width: 100%;
+    padding: 0 20px;
+    background: #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* search bar div contains input feild and magnifying glass icon in recent-chats for top bar */ 
+.search-bar div{
+    width: 100%;
+    height: 34px;
+    border-radius: 13px;
+    background: #fff;
+}
+
+/* recent chat contacts means recent chats of contacts/friends  */
+.recentChat-contacts {
+    /* height: 58px; */
+    height: 82%;
+    width: 100%;
+    padding: 0 20px 0 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* chatone iside .recentChat-contacts*/
+.chatOne{
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    /* background: #cdb5f4; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-Data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+
+}
+
+.chat-Data .name-time{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.name-time p:last-child {
+    font-size: 0.7rem;
+}
+
+.message{
+    font-size: 0.8rem;
+display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.image-div{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-div img{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+}
+
+
 
 /* col3 for open chat in main section  */
 .openChat{
