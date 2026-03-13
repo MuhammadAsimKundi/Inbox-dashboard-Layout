@@ -9,8 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     /* prevents scrolling completely as good for dashboard app */
-    overflow-x: none;
-    overflow-y: none;
+    overflow: hidden;
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -66,6 +65,7 @@ body {
 .main{
     width: 95.2%;
     height: 100%;
+    overflow: hidden;
 }
 
 
@@ -193,6 +193,7 @@ body {
     height: 92.6vh;
     padding: 2px 37px;
     border-top-left-radius: 30px;
+    overflow: hidden;
     display: grid;
     grid-template-areas: 
         'topRow topRow topRow'
@@ -338,6 +339,7 @@ body {
 /* col2 for recent chats and all chats */
 .recentChats{
     grid-area: colTwo;
+    height: 100%;
     background: #fff;
     border-radius: 7px;
     display: flex;
@@ -350,7 +352,7 @@ body {
 /* .ai-contacts  inside recent chats for the top bar*/
 .ai-contacts{
     /* height: 58px; */
-    height: 10%;
+    flex: 0 0 10%;
     width: 100%;
     padding: 0 20px 0 30px;
     background: #00ca00;
@@ -384,7 +386,7 @@ body {
 
 /* .search-bar inside  recent-chats for top bar */ 
 .search-bar {
-    height: 8%;
+    flex: 0 0 10%;
     width: 100%;
     padding: 0 20px;
     background: #efefef;
@@ -399,20 +401,41 @@ body {
     height: 34px;
     border-radius: 13px;
     background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* input feild inside the search bar */
+.search-bar input{
+    font-size: 0.9rem;
+    border-radius: 13px;
+    color: black;
+    padding: 3px 5px 3px 45px;
+    width: 100%;
+    height: 100%;
+    border: none; 
+    outline: none;
+}
+
+/* icon in the search bar inside input feild */
+.search-bar i {
+    position: absolute;
+    font-size: 0.9rem;
+    left: 20px;
+    top: 10px;
+    transform: translateY(-50);
+    color: grey;
 }
 
 /* recent chat contacts means recent chats of contacts/friends  */
 .recentChat-contacts {
-    /* height: 58px; */
-    height: 82%;
     width: 100%;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    overflow-y: scroll;
+    max-height: 80%;
+    flex: 0 0 80%;
+    overflow-y: auto;
     scroll-behavior: smooth;
 }
 
@@ -425,7 +448,7 @@ body {
 .chatOne{
     width: 100%;
     height: 70px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     /* background: #cdb5f4; */
     display: flex;
     justify-content: center;
@@ -453,8 +476,8 @@ body {
 .dot::after {
     position: absolute;
     content: "";
-    right: -5px;
-    top: 3px;
+    right: -6px;
+    top: 1px;
     width: 9px;
     height: 9px;
     background: #ff0000;
@@ -537,6 +560,13 @@ hr{
     background: #fff;
     border: 1px solid #dedede;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+.openChat::-webkit-scrollbar {
+    display: none;
 }
 
 /* div for main-info of the opened chat */
@@ -548,6 +578,7 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
 }
 
 /* .contact-info div for the opened contact info */
@@ -575,14 +606,20 @@ hr{
 /* main section for the OPENED CHATS */
 .opened-Chat{
     width: 100%;
-    height: 80%;
+    flex: 1;
     padding: 10px 20px;
+    margin-bottom: 10px;
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow-y: auto;
+}
+.opened-Chat::-webkit-scrollbar {
+    display: none;
 }
 
+/* div for the recieved chats */
 .recieved {
     display: flex;
     justify-content: flex-start;
@@ -590,27 +627,46 @@ hr{
     gap: 10px;
 }
 
+/* p inside recieved div */
 .recieved p{
     max-width: 360px;
-    padding: 20px 20px;
+    padding: 12px 20px;
     background: #efefef;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 12px;
+    position: relative;
 }
 
+/* adding suedo slector for time and date */
+.recieved p::after {
+    position: absolute;
+    content: '02 Fri 2019,05: 02 PM';
+    font-size: 0.6rem;
+    color: grey;
+    bottom: -10px;
+    left: 2px;
+    width: 150px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+/* div for the image inside chat */
 .chat-image{
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
+
+/* image inside chat */
 .chat-image img{
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
+/* send chats from our side */
 .send{
     display: flex;
     justify-content: flex-end;
@@ -618,12 +674,88 @@ hr{
     gap: 10px;
 }
 
+/* p inside send chats */
 .send p {
-    max-width: 360px;
-    padding: 20px 30px 20px 20px;
+    max-width: 340px;
+    width: 340px;
+    padding: 12px 30px 12px 20px;
     background: #efefef;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 0px;
+    position: relative;
+}
+
+/* adding suedo selector for time and date to send chat p */
+.send p::after {
+    position: absolute;
+    content: '02 Fri 2019,05: 02 PM';
+    font-size: 0.6rem;
+    color: grey;
+    bottom: -10px;
+    left: 230px;
+    width: 150px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+/* div for assign message/notifcation and hr */
+.assign{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #808080;
+    font-size: 0.8rem;
+}
+
+/* hr above assign */
+.assign hr{
+    width: 25%;
+}
+
+/* span inside assign div p for bold text */
+.assign p span{
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 500;
+}
+
+/* parent wrapper for input feild contains hr and (input and send icon) div */
+.message-input{
+    width: 100%;
+    height: 7%;
+    position: sticky;
+    font-size: 1.5rem;
+    bottom: 0;
+}
+
+/* wrapper for input and icon*/
+.input-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* input  message feild inside wrapper  */
+.input-wrapper input{
+    width: 100%;
+    height: 100%;
+    padding: 5px 45px 5px 10px;
+    border: none;
+    outline: none;
+}
+
+/* icon image inside input wrapper */
+.input-wrapper img{
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    transform: translateY(-50%);
 }
