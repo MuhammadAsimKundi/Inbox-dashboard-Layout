@@ -387,7 +387,7 @@ body {
     height: 8%;
     width: 100%;
     padding: 0 20px;
-    background: #ebebeb;
+    background: #efefef;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -412,19 +412,58 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* hiding the scrollbar inside the recentChat Contacts */
+.recentChat-contacts::-webkit-scrollbar {
+    display: none;
 }
 
 /* chatone iside .recentChat-contacts*/
 .chatOne{
     width: 100%;
     height: 70px;
-    margin-top: 20px;
+    margin: 10px 0px;
     /* background: #cdb5f4; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* div for the image of the contacts chats in chatOne */
+.image-div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Main Image of the contacts chats in chatOne */
+.image-div img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+/* adding seudo selector red notification dot to some contacts image */
+.dot::after {
+    position: absolute;
+    content: "";
+    right: -5px;
+    top: 3px;
+    width: 9px;
+    height: 9px;
+    background: #ff0000;
+    border: 4px solid #fff;
+    border-radius: 50%;
+
+}
+
+/* chat data contains two div that have all the data other then contact image*/
 .chat-Data{
     width: 100%;
     display: flex;
@@ -432,42 +471,64 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding-left: 20px;
-
+    gap: 3px;
 }
 
+/* .name-time contains name and time data */
 .chat-Data .name-time{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
+/* first child name to .name-time */
+.name-time p:first-child {
+    font-weight: 500;
+}
+
+/* last chil time to .name-time */
 .name-time p:last-child {
     font-size: 0.7rem;
+    color: grey;
 }
 
+/* parent folder to double check image and message */
+.check-message {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+/* double check image in .check-message */
+.check-message img {
+    width: 20px;
+    height: 20px;
+}
+
+/* message inside .chech-message */
 .message{
     font-size: 0.8rem;
-display: -webkit-box;
+    color: grey;
+    display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-.image-div{
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image-div img{
-    width: 55px;
-    height: 55px;
-    border-radius: 100%;
+/* color some of the contact message to black */
+.black-message{
+    color: black;
 }
 
+/* horizantal hr line */
+hr{
+    width: 100%;
+    border: 1px solid #efefef;
+}
 
 
 /* col3 for open chat in main section  */
@@ -476,4 +537,93 @@ display: -webkit-box;
     background: #fff;
     border: 1px solid #dedede;
     border-radius: 7px;
+}
+
+/* div for main-info of the opened chat */
+.main-info{
+    height: 10%;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .contact-info div for the opened contact info */
+.contact-info{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* .assignee-info div for the assigned chat contact info */
+.assingnee-info{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* name-icon div for the name with icon iside assignee-info */
+.name-icon{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    gap: 80px;
+}
+
+/* main section for the OPENED CHATS */
+.opened-Chat{
+    width: 100%;
+    height: 80%;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recieved {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.recieved p{
+    max-width: 360px;
+    padding: 20px 20px;
+    background: #efefef;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 12px;
+}
+
+.chat-image{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.chat-image img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.send{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.send p {
+    max-width: 360px;
+    padding: 20px 30px 20px 20px;
+    background: #efefef;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 0px;
 }
