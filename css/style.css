@@ -48,11 +48,15 @@ body {
     color: grey;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 .sideBar ul li {
-    padding-left: 20px;
+    padding-left: 23px;
     border-left: 6px solid transparent;
+}
+
+.sideBar ul li i{
+    font-size: 1.2rem;
 }
 .sideBar ul li:hover{
     border-left: 6px solid #8c45ff;
@@ -86,13 +90,16 @@ body {
     min-height: 100%;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 50px;
     align-items: center;
     color: grey;
 
 }
 
 .nav-center li {
+    font-size: 0.9rem;
+    font-weight: 500;
     border-top: 4px solid transparent;
     padding: 14px 5px;
 }
@@ -145,7 +152,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: grey;
 }
 
@@ -160,8 +167,8 @@ body {
     content: "";
     right: -8px;
     top: -6px;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     background: #ff0000;
     box-shadow: 0 0 7px red;
     border-radius: 50%;
@@ -210,6 +217,11 @@ body {
     justify-content: space-between;
     align-items: flex-end;
 }
+.credits-data p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(76, 76, 76);
+}
 
 /* div inside credits-data for data on right */
 .credits{
@@ -254,8 +266,9 @@ body {
     font-size: 1.2rem;
     padding-right: 50px;
     color: #8c45ff;
+    /* font-weight: 800; */
     background: #fff;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -263,10 +276,10 @@ body {
 .credits p:last-child{
     height: 35px;
     font-size: 0.8rem;
+    /* color: grey; */
     background: #fff;
     padding: 7px 26px 7px 15px;
     border-radius: 5px;
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -289,7 +302,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     list-style-type: none;
 }
 
@@ -312,8 +325,8 @@ body {
 
 /* images inside chat-sideBar UL li's */
 .chat-sideBar li img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -325,8 +338,8 @@ body {
 .chat-sideBar li:nth-child(5)::after{
     position: absolute;
     content: "";
-    right: 0px;
-    top: 2px;
+    right: 4px;
+    top: 6px;
     width: 5px;
     height: 5px;
     background: #ff0000;
@@ -355,7 +368,7 @@ body {
     flex: 0 0 10%;
     width: 100%;
     padding: 0 20px 0 30px;
-    background: #00ca00;
+    background: #01ad01ca;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -457,8 +470,8 @@ body {
 
 /* div for the image of the contacts chats in chatOne */
 .image-div {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,8 +480,8 @@ body {
 
 /* Main Image of the contacts chats in chatOne */
 .image-div img {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
     border-radius: 100%;
 }
 
@@ -564,6 +577,7 @@ hr{
     flex-direction: column;
     height: 100%;
     overflow-y: auto;
+    /* font-size: 0.2rem; */
 }
 .openChat::-webkit-scrollbar {
     display: none;
@@ -588,11 +602,41 @@ hr{
     gap: 10px;
 }
 
+.contact-info div:last-child{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 6px;
+}
+
+/* special class from assignee and contact images from opened chat div */
+.chat-image-div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Main Image of the contacts and assignee in opened chat */
+.chat-image-div img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
 /* .assignee-info div for the assigned chat contact info */
 .assingnee-info{
     display: flex;
     align-items: flex-end;
     gap: 10px;
+}
+
+.assingnee-info .second-child {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 6px;
 }
 
 /* name-icon div for the name with icon iside assignee-info */
@@ -609,7 +653,7 @@ hr{
     flex: 1;
     padding: 10px 20px;
     margin-bottom: 10px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -630,7 +674,7 @@ hr{
 /* p inside recieved div */
 .recieved p{
     max-width: 360px;
-    padding: 12px 20px;
+    padding: 12px 20px 20px 20px;
     background: #efefef;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -678,7 +722,7 @@ hr{
 .send p {
     max-width: 340px;
     width: 340px;
-    padding: 12px 30px 12px 20px;
+    padding: 12px 30px 20px 20px;
     background: #efefef;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
