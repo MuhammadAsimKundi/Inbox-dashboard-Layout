@@ -602,12 +602,12 @@ hr{
     gap: 10px;
 }
 
-.contact-info div:last-child{
+/* .contact-info .second-child {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    gap: 6px;
-}
+    /* gap: 0px;
+} */ 
 
 /* special class from assignee and contact images from opened chat div */
 .chat-image-div {
@@ -632,11 +632,12 @@ hr{
     gap: 10px;
 }
 
-.assingnee-info .second-child {
+.second-child {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    gap: 6px;
+    gap: 0px;
+    font-size: 0.8rem;
 }
 
 /* name-icon div for the name with icon iside assignee-info */
