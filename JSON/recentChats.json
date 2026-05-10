@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Riya Jain",
+    "time": "04:06 PM",
+    "image": "./images/picThree.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "hasDot": true
+  },
+  {
+    "name": "Amit Gupta",
+    "time": "03:58 PM",
+    "image": "./images/picTwo.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/doubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Rahul Choudhary",
+    "time": "02:45 PM",
+    "image": "./images/picOne.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Sumit Pratap Singh",
+    "time": "04:06 PM",
+    "image": "./images/picFour.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "hasDot": true
+  },
+  {
+    "name": "M. Ali",
+    "time": "04:06 PM",
+    "image": "./images/picFive.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "John Doe",
+    "time": "04:06 PM",
+    "image": "./images/picSix.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Jassica",
+    "time": "04:06 PM",
+    "image": "./images/picSeven.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "hasDot": false
+  },
+  {
+    "name": "Syra",
+    "time": "04:06 PM",
+    "image": "./images/picEight.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/doubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Maaz Khan",
+    "time": "04:06 PM",
+    "image": "./images/picNine.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Mehtab Akbar",
+    "time": "04:06 PM",
+    "image": "./images/picTen.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Isha",
+    "time": "04:06 PM",
+    "image": "./images/picThree.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "hasDot": true
+  },
+  {
+    "name": "hashir Gupta",
+    "time": "03:58 PM",
+    "image": "./images/picTwo.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/doubleCheck.png",
+    "hasDot": false
+  },
+  {
+    "name": "Noman Sultan",
+    "time": "02:45 PM",
+    "image": "./images/picOne.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "checkIcon": "./images/blueDoubleCheck.png",
+    "hasDot": false
+  }
+]
