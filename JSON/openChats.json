@@ -1,0 +1,249 @@
+{
+  "commonChats": [
+    {
+      "type": "send",
+      "message": "Lorem ipsum dolor sit. filr ipsum dolor sit."
+    },
+    {
+      "type": "received",
+      "message": "Lorem ipsum dolor sit. filr ipsum dolor sit. Lorem ipsum dolor sit. filr ipsum dolor sit."
+    },
+    {
+      "type": "send",
+      "message": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus adipisci quae dolorem veritatis necessitatibus."
+    },
+    {
+      "type": "received",
+      "message": "Okay."
+    },
+    {
+      "type": "assignment",
+      "message": "You assigned this conversation to Summit Pratap Singh"
+    },
+    {
+      "type": "send",
+      "message": "Lorem ipsum dolor sit. filr ipsum dolor sit."
+    },
+    {
+      "type": "received",
+      "message": "Hi"
+    },
+    {
+      "type": "send",
+      "message": "Lorem ipsum dolor sit. filr ipsum dolor sit. filr ipsum dolor sit."
+    },
+    {
+      "type": "received",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id?"
+    },
+    {
+      "type": "send",
+      "message": "Lorem ipsum dolor sit."
+    },
+    {
+      "type": "received",
+      "message": "Lorem ipsum dolor."
+    },
+    {
+      "type": "send",
+      "message": "Lorem ipsum dolor sit. filr ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit."
+    
+    },
+    {
+      "type": "received",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est."
+    },
+    {
+      "type": "send",
+      "message": "Lorem, ipsum."
+    },
+    {
+      "type": "received",
+      "message": "Lorem ipsum dolor sit amet."
+    }
+  ],
+
+  "chatData": [
+    {
+      "id": 1,
+      "contact": {
+        "name": "Riya Jain",
+        "phone": "+91 8756533428",
+        "image": "./images/picThree.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 2,
+      "contact": {
+        "name": "Amit Gupta",
+        "phone": "+91 8756533428",
+        "image": "./images/picTwo.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 3,
+      "contact": {
+        "name": "Rahul Choudhary",
+        "phone": "+91 8756533428",
+        "image": "./images/picOne.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 4,
+      "contact": {
+        "name": "Sumit Pratap Singh",
+        "phone": "+91 8756533428",
+        "image": "./images/picFour.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 5,
+      "contact": {
+        "name": "M. Ali",
+        "phone": "+91 8756533428",
+        "image": "./images/picFive.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 6,
+      "contact": {
+        "name": "John Doe",
+        "phone": "+91 8756533428",
+        "image": "./images/picSix.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 7,
+      "contact": {
+        "name": "Jassica",
+        "phone": "+91 8756533428",
+        "image": "./images/picSeven.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 8,
+      "contact": {
+        "name": "Syra",
+        "phone": "+91 8756533428",
+        "image": "./images/picEight.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 9,
+      "contact": {
+        "name": "Maaz Khan",
+        "phone": "+91 8756533428",
+        "image": "./images/picNine.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 10,
+      "contact": {
+        "name": "Mehtab Akbar",
+        "phone": "+91 8756533428",
+        "image": "./images/picTen.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 11,
+      "contact": {
+        "name": "Isha",
+        "phone": "+91 8756533428",
+        "image": "./images/picThree.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 12,
+      "contact": {
+        "name": "hashir Gupta",
+        "phone": "+91 8756533428",
+        "image": "./images/picTwo.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    },
+
+    {
+      "id": 13,
+      "contact": {
+        "name": "Noman Sultan",
+        "phone": "+91 8756533428",
+        "image": "./images/picOne.jpg"
+      },
+      "assignee": {
+        "name": "Sumit Pratap Singh",
+        "role": "Assignee",
+        "image": "./images/picFour.jpg"
+      }
+    }
+  ]
+}
