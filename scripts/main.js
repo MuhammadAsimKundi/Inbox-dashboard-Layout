@@ -1,21 +1,20 @@
 import { openChats } from "./openChat.js";
 
-// fetching recent chats json
+//fetching recent chats json
 fetch('./JSON/recentChats.json')
 
 // converting response into json
 .then(response => response.json())
 
-// getting recent chats array
+//getting recent chats array
 .then(recentChats => {
-
     console.log('Recent Chats:', recentChats);
 
-    // selecting left sidebar container
+    //left sidebar container
     const chats = document.querySelector('.js-recentChat-contacts');
 
-    // checking if container exists
-    if(!chats){
+    //checking if container exists
+    if(!chats ){
         console.error('.js-recentChat-contacts not found');
         return;
     }
@@ -74,13 +73,12 @@ fetch('./JSON/recentChats.json')
 
         console.log('Clicked User ID:', selectedUserId);
 
-        //rendering opene chat
         openChats(selectedUserId);
 
     });
 
 
-    //making searchbar functional
+    //serchbar
     const searchInput = document.getElementById("searchInput");
 
     searchInput.addEventListener("input", (e) => {

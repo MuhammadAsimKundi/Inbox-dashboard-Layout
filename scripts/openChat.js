@@ -102,13 +102,13 @@ export function openChats(selectedUserId){
         // selecting open chat container
         const openChatContainer = document.querySelector('.js-openChat');
 
-        // checking if container exists
+        //checking if container exists
         if(!openChatContainer){
             console.error('.js-openChat container not found');
             return;
         }
 
-        // rendering final opened chat UI
+        //rendering final opened chat UI
         openChatContainer.innerHTML = `
 
             <!-- top info section -->
@@ -198,7 +198,7 @@ export function openChats(selectedUserId){
 
     // catching fetch/json errors
     .catch(error => {
-        console.error("Error loading chats:", error);
+        console.error("Error loading chats [in openchats.js]:", error);
     });
 
 }
