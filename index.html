@@ -90,29 +90,7 @@
                 </ul>
 
                 <!-- div that contains search-bar and all the recents chats -->
-                <div class="recentChats">
-
-                    <!-- Top AI contact and humburger/signal-opposite bar -->
-                    <div class="ai-contacts">
-                        <h3>AI contacts</h3>
-                        <div><img src="./images/second-signal.png" alt=""></div>
-                    </div>
-
-                    <!-- search bar here for col2 -->
-                    <div class="search-bar">
-                        <div>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id="searchInput" placeholder="Ask AI or Search...">
-                        </div>
-                    </div>
-
-                    <!-- recent chats here -->
-                    <div class="recentChat-contacts js-recentChat-contacts">
-
-                        
-
-                    </div>
-                </div>
+                <recent-chats class="recentChats"></recent-chats>
 
 
                 <!--------------------------------------------------------------------------------------------- -->
@@ -126,7 +104,10 @@
 
         </div>
     </div>
-    <script type="module" src="./scripts/main.js"></script>
+    <!-- <script type="module" src="./scripts/main.js"></script> -->
+    <script type="module" src="./scripts/ChatSidebar.js"></script>
+    <script type="module" src="./scripts/searchSidebar.js"></script>
+
 </body>
 
 </html>
