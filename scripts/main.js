@@ -129,16 +129,10 @@
 //     console.log('Error loading json:', err);
 // });
 
-import "./components/RecentChats.js";
-import "./components/ChatSidebar.js";
+// import "./components/OpenChat.js";
+// import "./components/ChatSidebar.js";
+// import "./components/RecentChats.js";
 
-const chatSidebar = document.querySelector("chat-sidebar");
-const searchInput = document.getElementById("searchInput");
-
-searchInput.addEventListener("input", (e) => {
-  chatSidebar.setSearch(e.target.value);
-});
-
-document.addEventListener("chat-search", (e) => {
-    console.log("Searching:", e.detail);
-});
+// document.addEventListener("chat-search", (e) => {
+//     console.log("Searching:", e.detail);
+// });

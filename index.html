@@ -39,21 +39,8 @@
         <!-- Main content here -->
         <div class="main">
 
-            <!-- navbar -->
-            <nav class="nav">
-                <ul class="nav-left"></ul>
-                <ul class="nav-center">
-                    <li>Dashboard</li>
-                    <li>Marketing</li>
-                    <li><i class="fa-solid fa-dollar-sign"></i>&nbsp;&nbsp;&nbsp;&nbsp; Sales</li>
-                    <li>GMB</li>
-                    <li>Automation</li>
-                </ul>
-                <ul class="nav-right">
-                    <li><i class="fa-regular fa-bell"></i></li>
-                    <li><i class="fa-brands fa-google"></i></li>
-                </ul>
-            </nav>
+            <!-- navbar component-->
+            <nav-bar></nav-bar>
 
 
 
@@ -63,16 +50,19 @@
                 <!-- div for small buttons alike for h3-contactCenter, credits and date etc -->
                 <div class="credits-data">
                     <p>Contact Center</p>
-                    <!-- credits data buttons-alike here -->
-                    <div class="credits">
+                    <!-- <div class="credits">
                         <p>Credits &nbsp;&nbsp;</p>
                         <div>
                             <span>¢</span>
                             <p>69,583,322,187</p>
                         </div>
-                        <!-- <p><span>¢</span> 69,583,322,187</p> -->
                         <p><i class="fa-solid fa-calendar-days " style="color: #8c45ff; font-size: 1.2rem;"></i> Jan 02, 2019 - Feb 15, 2020</p>
-                    </div>
+                    </div> -->
+                    <app-credits class="credits"  
+                        amount="69,583,322,187"
+                        start="Jan 02, 2019"
+                        end="">
+                    </app-credits>
                 
                 </div>
 
@@ -89,24 +79,26 @@
                     <li><img src="./images/signal.png" alt="icon image"></li>
                 </ul>
 
-                <!-- div that contains search-bar and all the recents chats -->
+                <!-- div component that contains search-bar and all the recents chats -->
                 <recent-chats class="recentChats"></recent-chats>
 
 
                 <!--------------------------------------------------------------------------------------------- -->
 
                 <!-- div that has the open chat -->
-                <div class="openChat js-openChat">
-
-                </div>
+                <open-chats class="openChat" id="chatPanel"></open-chats>
+                <!-- <open-chat class="openChat js-openChat"></open-chat> -->
             </div>
 
 
         </div>
     </div>
     <!-- <script type="module" src="./scripts/main.js"></script> -->
-    <script type="module" src="./scripts/ChatSidebar.js"></script>
-    <script type="module" src="./scripts/searchSidebar.js"></script>
+    <script type="module" src="./components/nav-bar.js"></script>
+    <script type="module" src="./components/credits.js"></script>
+    <script type="module" src="./components/openChat.js"></script>
+    <script type="module" src="./components/ChatSidebar.js"></script>
+    <script type="module" src="./components/searchSidebar.js"></script>
 
 </body>
 

@@ -353,6 +353,7 @@ body {
 .recentChats{
     grid-area: colTwo;
     height: 100%;
+    width: 100%;
     background: #fff;
     border-radius: 7px;
     display: flex;
@@ -444,7 +445,6 @@ body {
 /* recent chat contacts means recent chats of contacts/friends  */
 .recentChat-contacts {
     width: 100%;
-    padding: 0 20px;
     background: #fff;
     max-height: 80%;
     flex: 0 0 80%;

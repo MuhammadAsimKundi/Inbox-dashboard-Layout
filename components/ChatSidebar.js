@@ -1,4 +1,4 @@
-import { openChats } from "./openChat.js";
+// import { openChats } from "../scripts/openChat.js";
 
 class ChatSidebar extends HTMLElement {
   constructor() {
@@ -20,9 +20,20 @@ class ChatSidebar extends HTMLElement {
     // listen to search from RecentChats component
     document.addEventListener("chat-search", this.handleSearchExternal);
   }
-
+  
   disconnectedCallback() {
     document.removeEventListener("chat-search", this.handleSearchExternal);
+  }
+
+  //openchat()
+  openChat(userId) {
+    const chatPanel = document.querySelector('open-chats');
+
+    if (chatPanel) {
+      chatPanel.render(userId);
+    } else {
+      console.error('<open-chats> component not found');
+    }
   }
 
   async loadData() {
@@ -36,6 +47,7 @@ class ChatSidebar extends HTMLElement {
       this.render();
       this.attachEvents();
 
+      // auto open first chat
       if (data.length > 0) {
         this.openChat(data[0].id);
       }
@@ -44,9 +56,7 @@ class ChatSidebar extends HTMLElement {
     }
   }
 
-  /* -------------------------
-     EXTERNAL SEARCH (FROM RecentChats)
-  ------------------------- */
+  //external search logic
   handleSearchExternal(e) {
     const text = (e.detail || "").toLowerCase().trim();
 
@@ -58,19 +68,17 @@ class ChatSidebar extends HTMLElement {
     this.attachEvents();
   }
 
-  /* -------------------------
-     CHAT CLICK LOGIC
-  ------------------------- */
+  //chat click logic
   handleChatClick(e) {
     const chat = e.target.closest(".chatOne");
     if (!chat) return;
 
-    this.openChat(chat.dataset.id);
+    const selectedUserId = chat.dataset.id;
+
+    this.openChat(selectedUserId);
   }
 
-  /* -------------------------
-     RENDER UI
-  ------------------------- */
+  //render ui
   render() {
     const chatsHTML = this.state.filteredChats.map(user => `
       <div class="chatOne" data-id="${user.id}">
@@ -105,7 +113,7 @@ class ChatSidebar extends HTMLElement {
       <style>
         :host {
           display: block;
-          font-family: Arial, sans-serif;
+          font-family: 'Poppins', sans-serif
         }
 
         .list {
@@ -122,8 +130,8 @@ class ChatSidebar extends HTMLElement {
         .chatOne {
           display: flex;
           align-items: center;
-          gap: 10px;
-          padding: 10px 0;
+          gap: 20px;
+          padding: 14px 20px;
           cursor: pointer;
         }
 
@@ -133,8 +141,8 @@ class ChatSidebar extends HTMLElement {
 
         .image-div {
           position: relative;
-          width: 48px;
-          height: 48px;
+          width: 52px;
+          height: 52px;
           flex-shrink: 0;
         }
 
@@ -148,13 +156,13 @@ class ChatSidebar extends HTMLElement {
         .image-div.dot::after {
           content: "";
           position: absolute;
-          width: 10px;
-          height: 10px;
+          width: 9px;
+          height: 9px;
           background: #ff0000;
           border-radius: 50%;
-          border: 2px solid #fff;
-          right: 0;
-          top: 0;
+          border: 4px solid #fff;
+          right: -6px;
+          top: 2px;
         }
 
         .chat-data {
@@ -169,14 +177,14 @@ class ChatSidebar extends HTMLElement {
         }
 
         .name {
-          font-size: 0.95rem;
-          font-weight: 600;
+          font-size: 0.9rem;
+          font-weight: 500;
           margin: 0;
         }
 
         .time {
-          font-size: 0.75rem;
-          color: gray;
+          font-size: 0.7rem;
+          color: grey;
           margin: 0;
         }
 
@@ -184,18 +192,17 @@ class ChatSidebar extends HTMLElement {
           display: flex;
           align-items: center;
           gap: 6px;
-          margin-top: 2px;
         }
 
         .check-icon {
-          width: 16px;
-          height: 16px;
+          width: 20px;
+          height: 20px;
           flex-shrink: 0;
         }
 
         .message {
-          font-size: 0.85rem;
-          color: #666;
+          font-size: 0.8rem;
+          color: grey;
           margin: 0;
           padding-top: 4px;
 
@@ -211,12 +218,12 @@ class ChatSidebar extends HTMLElement {
 
         .unread {
           color: #000;
-          font-weight: 500;
         }
 
         .divider {
           border: none;
           height: 1px;
+          padding: 0px 20px;
           background: #eee;
           margin: 0;
         }
@@ -228,18 +235,12 @@ class ChatSidebar extends HTMLElement {
     `;
   }
 
-  /* -------------------------
-     EVENTS
-  ------------------------- */
+  //events
   attachEvents() {
     const container = this.shadowRoot.querySelector(".js-recentChat-contacts");
 
     container.removeEventListener("click", this.handleChatClick);
     container.addEventListener("click", this.handleChatClick);
-  }
-
-  openChat(id) {
-    openChats(id);
   }
 }
 
