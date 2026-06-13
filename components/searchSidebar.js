@@ -28,7 +28,7 @@ class RecentChats extends HTMLElement {
                     </div>
                 </div>
 
-                <!-- Existing Chat Sidebar Component -->
+                <!-- Existing recentchats Sidebar Component -->
                 <chat-sidebar
                     class="recentChat-contacts js-recentChat-contacts">
                 </chat-sidebar>
@@ -48,8 +48,13 @@ class RecentChats extends HTMLElement {
             // Send search event to parent/app
             this.dispatchEvent(
                 new CustomEvent("chat-search", {
+                    //data sent with even
                     detail: searchValue,
+
+                    //allow event to move upword through dom tree
                     bubbles: true,
+
+                    //allow event to cross shodow dom boundries
                     composed: true
                 })
             );

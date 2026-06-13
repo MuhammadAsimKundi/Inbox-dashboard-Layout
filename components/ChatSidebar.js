@@ -10,6 +10,10 @@ class ChatSidebar extends HTMLElement {
       filteredChats: []
     };
 
+    //bind set .this to current object ChatSidebar when later used in 
+    // callbacks or event listeners
+    //alternative modern method is arrow function as they automatically keep this 
+    // and dont create thier own this you often dont need  .bind();
     this.handleChatClick = this.handleChatClick.bind(this);
     this.handleSearchExternal = this.handleSearchExternal.bind(this);
   }
@@ -64,7 +68,10 @@ class ChatSidebar extends HTMLElement {
       user.name.toLowerCase().includes(text)
     );
 
+    //rebuildIng UI FROM FILTERED RESULTS
     this.render();
+
+    //reattaching click events bc render replaced html
     this.attachEvents();
   }
 
@@ -235,10 +242,12 @@ class ChatSidebar extends HTMLElement {
     `;
   }
 
-  //events
+  //attaching click event to chat list
   attachEvents() {
+    //getting recent chats Container
     const container = this.shadowRoot.querySelector(".js-recentChat-contacts");
 
+    //first remvoing and then attiching click listern to avoid duplicates
     container.removeEventListener("click", this.handleChatClick);
     container.addEventListener("click", this.handleChatClick);
   }
