@@ -38,7 +38,6 @@ class OpenChats extends HTMLElement {
             //getting common chats array
             const commonChats = data.commonChats;
 
-            //variable for storing generated chats html
             let messagesHTML = `
             <link rel="stylesheet" href="./css/style.css">
             <link
@@ -70,7 +69,7 @@ class OpenChats extends HTMLElement {
                     `;
                 }
 
-                // received message
+                //received message
                 else if(chat.type === 'received'){
 
                     messagesHTML += `
@@ -90,7 +89,7 @@ class OpenChats extends HTMLElement {
                     `;
                 }
 
-                // assignment message
+                //assignment message
                 else if(chat.type === 'assignment'){
 
                     messagesHTML += `
@@ -201,7 +200,6 @@ class OpenChats extends HTMLElement {
 
         })
 
-        // catching fetch/json errors
         .catch(error => {
             console.error("Error loading chats [in openchats.js]:", error);
         });
