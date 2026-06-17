@@ -9,7 +9,7 @@ class firstChat extends HTMLElement{
 
     connectedCallback(){
         this.shadowRoot.innerHTML = `
-              <style>
+        <style>
         :host {
           display: block;
           font-family: 'Poppins', sans-serif
