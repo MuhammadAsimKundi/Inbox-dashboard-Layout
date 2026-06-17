@@ -88,40 +88,70 @@ class ChatSidebar extends HTMLElement {
   //render ui
   render() {
 
-    const chatsHTML = this.state.filteredChats.map(user => {
-      if (user.id === 1) {
-        return `<first-chat></first-chat>`;
-      }
+    const chatsHTML = this.state.filteredChats.map(user => `
+      <div class="chatOne" data-id="${user.id}">
+        
+        <div class="image-div ${user.hasDot ? "dot" : ""}">
+          <img src="${user.image}" alt="${user.name}" />
+        </div>
 
-      return `
-        <div class="chatOne" data-id="${user.id}">
-          
-          <div class="image-div ${user.hasDot ? "dot" : ""}">
-            <img src="${user.image}" alt="${user.name}" />
+        <div class="chat-data">
+
+          <div class="top-row">
+            <p class="name">${user.name}</p>
+            <p class="time">${user.time}</p>
           </div>
 
-          <div class="chat-data">
+          <div class="bottom-row">
+            ${user.checkIcon ? `<img class="check-icon" src="${user.checkIcon}" />` : ""}
 
-            <div class="top-row">
-              <p class="name">${user.name}</p>
-              <p class="time">${user.time}</p>
-            </div>
-
-            <div class="bottom-row">
-              ${user.checkIcon ? `<img class="check-icon" src="${user.checkIcon}" />` : ""}
-
-              <p class="message ${user.hasDot ? "unread" : ""}">
-                ${user.message}
-              </p>
-            </div>
-
+            <p class="message ${user.hasDot ? "unread" : ""}">
+              ${user.message}
+            </p>
           </div>
 
         </div>
 
-        <hr class="divider" />
-      `;
-    }).join("");
+      </div>
+
+      <hr class="divider" />
+    `).join("");
+
+    //this code breaks the complete flow
+    //{
+    //   if (user.id === 1) {
+    //     return `<first-chat></first-chat>`;
+    //   }
+
+    //   return `
+    //     <div class="chatOne" data-id="${user.id}">
+          
+    //       <div class="image-div ${user.hasDot ? "dot" : ""}">
+    //         <img src="${user.image}" alt="${user.name}" />
+    //       </div>
+
+    //       <div class="chat-data">
+
+    //         <div class="top-row">
+    //           <p class="name">${user.name}</p>
+    //           <p class="time">${user.time}</p>
+    //         </div>
+
+    //         <div class="bottom-row">
+    //           ${user.checkIcon ? `<img class="check-icon" src="${user.checkIcon}" />` : ""}
+
+    //           <p class="message ${user.hasDot ? "unread" : ""}">
+    //             ${user.message}
+    //           </p>
+    //         </div>
+
+    //       </div>
+
+    //     </div>
+
+    //     <hr class="divider" />
+    //   `;
+    // }).join("");
 
     this.shadowRoot.innerHTML = `
       <style>

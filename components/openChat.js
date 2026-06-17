@@ -113,7 +113,7 @@ class OpenChats extends HTMLElement {
 
             this.shadowRoot.innerHTML = `
 
-                <link rel="stylesheet" href="./styles/openChat.css">
+                <link rel="stylesheet" href="./styles/style.css">
 
                 <!-- top info section -->
                 <div class="main-info">
